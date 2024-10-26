@@ -7,6 +7,47 @@ This README provides instructions to create a sample AsterixDB database named `S
 
 Ensure AsterixDB is installed and running locally (Run http://localhost:19006/ on your web browser). To load data, have your JSON files downloaded from the github repository.
 
+### Installation Guide for AsterixDB with JDK 17
+
+1. **Check for JDK 17 Installation:**
+   - Open a terminal or command prompt and run:
+     ```bash
+     java -version
+     ```
+   - If JDK 17 is not installed or if the version is incorrect, download Amazon Corretto JDK 17 from [this link](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html).
+   - **Note:** Select the version that matches your operating system (Windows, macOS, or Linux) and follow the installation instructions for your platform.
+
+2. **Download AsterixDB Binaries:**
+   - Go to the AsterixDB [download page](https://asterixdb.apache.org/dev-setup.html#server-package).
+   - Under **Master Snapshots** > **Server Package**, click on **Download AsterixDB Dev Build** to download the latest version of AsterixDB.
+
+3. **Starting the AsterixDB Cluster:**
+   - Extract the AsterixDB package if it is compressed.
+   - Open a terminal or command prompt and navigate to the extracted directory.
+   - Start the sample cluster:
+     - On **Windows**, run:
+       ```bash
+       /opt/local/bin/start-sample-cluster.bat
+       ```
+     - On **Linux or macOS**, run:
+       ```bash
+       /opt/local/bin/start-sample-cluster.sh
+       ```
+
+4. **If the Cluster Fails to Start:**
+   - If the cluster is already running or in an unusable state, stop it first:
+     - On **Windows**, run:
+       ```bash
+       /opt/local/bin/stop-sample-cluster.bat
+       ```
+     - On **Linux or macOS**, run:
+       ```bash
+       /opt/local/bin/stop-sample-cluster.sh
+       ```
+   - Then, restart the cluster by running the start command again.
+
+This setup should get AsterixDB running smoothly on your machine with JDK 17.
+
 ## Database Schema
 
 ### Dataverse and Datasets
